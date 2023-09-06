@@ -1,33 +1,122 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( const MyApp());
 }
 
+//-------BUTTON--------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         floatingActionButton: FloatingActionButton(
+//             onPressed: (){
+
+//             },
+//             child: Icon(Icons.thumb_up),
+//             backgroundColor: Colors.pink,
+//           ),
+//       ),
+//     );
+//   }
+// }
+
+//-------SCAFFOLD----------
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // int _count = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Sample Code'),
+        ),
+
+        body: Center(
+          child: Text('You have pressed the button times.')
+        ),
+
+        bottomNavigationBar: BottomAppBar (
+          child: Container(
+            height: 50.0,
+          ),
+        ),
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => 0,
+          tooltip: 'Increment Counter',
+          child: Icon(Icons.add),
+        ),
+
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
       ),
-      home: const MyHomePage(title: 'Tugas Pertama Flutter'),
     );
   }
 }
+
+//-----------Dialog--------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         body:MyLayout(),
+//       ),
+//     );
+//   }
+// }
+
+
+// class MyLayout extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.all(8.0),
+      
+//       child: ElevatedButton(
+        
+//         child: Text('Show ALert'),
+//         onPressed: (){
+//           showAlertDialog(context);
+//         },
+//       ),
+//       );
+//   }
+// }
+
+// showAlertDialog(BuildContext context) {
+//  // set up the button
+//  Widget okButton = TextButton(
+//     child: Text("OK"),
+//     onPressed: () { },
+//   );
+//  // set up the AlertDialog
+//  AlertDialog alert = AlertDialog(
+//     title: Text("My title"),
+//     content: Text("This is my message."),
+//     actions: [
+//       okButton,
+//     ],
+//   );
+//  // show the dialog
+//  showDialog(
+//   context: context,
+//   builder: (BuildContext context) {
+//       return alert;
+//     },
+//  );
+// }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -48,7 +137,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // int _counter = 0;
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -57,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      // _counter++;
+      _counter++;
     });
   }
 
@@ -96,16 +185,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Laita Zidan',
+              'You have pushed the button this many times:',
             ),
             Text(
-              '2141762100',
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
             ),
-
-            /* Text(
-            '$_counter',
-             style: Theme.of(context).textTheme.headline4,
-             ), */
           ],
         ),
       ),
