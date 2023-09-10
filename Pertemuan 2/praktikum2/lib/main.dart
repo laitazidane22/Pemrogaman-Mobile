@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 void main() {
-  runApp( const MyApp());
+  runApp(const MyApp());
 }
 
 //-------BUTTON--------
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
 
-//   // This widget is the root of your application.
+//   This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -31,7 +31,7 @@ void main() {
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
 
-//   // int _count = 0;
+//   int _count = 0;
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -67,7 +67,7 @@ void main() {
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
 
-//   // This widget is the root of your application.
+//   This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -78,15 +78,14 @@ void main() {
 //   }
 // }
 
-
 // class MyLayout extends StatelessWidget{
 //   @override
 //   Widget build(BuildContext context) {
 //     return Padding(
 //       padding: const EdgeInsets.all(8.0),
-      
+
 //       child: ElevatedButton(
-        
+
 //         child: Text('Show ALert'),
 //         onPressed: (){
 //           showAlertDialog(context);
@@ -97,12 +96,12 @@ void main() {
 // }
 
 // showAlertDialog(BuildContext context) {
-//  // set up the button
+//  set up the button
 //  Widget okButton = TextButton(
 //     child: Text("OK"),
 //     onPressed: () { },
 //   );
-//  // set up the AlertDialog
+//  set up the AlertDialog
 //  AlertDialog alert = AlertDialog(
 //     title: Text("My title"),
 //     content: Text("This is my message."),
@@ -110,7 +109,7 @@ void main() {
 //       okButton,
 //     ],
 //   );
-//  // show the dialog
+//  show the dialog
 //  showDialog(
 //   context: context,
 //   builder: (BuildContext context) {
@@ -123,7 +122,7 @@ void main() {
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
 
-//   // This widget is the root of your application.
+//   This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -148,7 +147,7 @@ void main() {
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
 
-//   // This widget is the root of your application.
+//   This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -170,12 +169,12 @@ void main() {
 // }
 
 // class _MyHomePageState extends State<MyHomePage> {
-//   //Variable/State untuk mengambil tanggal
+//   Variable/State untuk mengambil tanggal
 //   DateTime selectedDate = DateTime.now();
 
-//   // Initial SelectDate FLutter
+//   Initial SelectDate FLutter
 //   Future<Null> _selectDate(BuildContext context) async {
-//  // Initial DateTime FIinal Picked
+//  Initial DateTime FIinal Picked
 //   final DateTime? picked = await showDatePicker(
 //       context: context,
 //       initialDate: selectedDate,
@@ -189,7 +188,7 @@ void main() {
 
 //   @override
 //   Widget build(BuildContext context) {
-    
+
 //     return Scaffold(
 //       appBar: AppBar(
 //         title: Text(widget.title),
@@ -213,25 +212,275 @@ void main() {
 // }
 
 //--------BUILD IN LAYOUT WIDGET------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(title: Text("Contoh Button")),
+//         body: Container(
+//           child: ElevatedButton(
+//             style: ElevatedButton.styleFrom(primary: Colors.red[900]),
+//             onPressed: () {},
+//             child: Text(
+//               "Button",
+//               style: TextStyle(fontSize: 20),
+//             ),
+//           )
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//------------PROPERTY ALIGMENT--------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(title: Text("Contoh Aligment")),
+//         body: Container(
+//           alignment: Alignment.bottomCenter,
+//           child: Text(
+//             "Semangat Belajar",
+//             style: TextStyle(fontSize: 20),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//------------PROPERTY COLOR--------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Color")),
+//           body: Container(
+//               margin: const EdgeInsets.all(50),
+//               height: 200,
+//               width: 200,
+//               alignment: Alignment.center,
+//               color: Colors.amber[900],
+//               child: const Text(
+//                 'Semangat Belajar',
+//                 style: TextStyle(fontSize: 20, color: Colors.white),
+//               ))),
+//     );
+//   }
+// }
+
+//------------PROPERTY HEIGHT DAN WIDTH--------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Height dan Width")),
+//           body: Container(
+//               margin: const EdgeInsets.all(50),
+//               height: 200,
+//               width: 200,
+//               alignment: Alignment.center,
+//               color: Colors.blueGrey,
+//               child: const Text(
+//                 'Semangat Belajar',
+//                 style: TextStyle(fontSize: 20, color: Colors.white),
+//               )
+//         )
+//       ),
+//     );
+//   }
+// }
+
+//------------PROPERTY MARGIN--------------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Margin")),
+//           body: Container(
+//               margin: const EdgeInsets.all(50),
+//               height: 200,
+//               width: 200,
+//               alignment: Alignment.topLeft,
+//               color: Colors.blueGrey,
+//               child: const Text(
+//                 'Semangat Belajar Flutter',
+//                 style: TextStyle(fontSize: 20, color: Colors.white),
+//               ))),
+//     );
+//   }
+// }
+
+//---------PROPERTY PADDING----------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Padding")),
+//           body: Container(
+//               padding: const EdgeInsets.only(left: 20),
+//               margin: const EdgeInsets.all(20),
+//               height: 200,
+//               width: 200,
+//               alignment: Alignment.topLeft,
+//               color: Colors.blueGrey,
+//               child: const Text(
+//                 'Ayo Belajar Flutter',
+//                 style: TextStyle(fontSize: 20, color: Colors.white),
+//               ))),
+//     );
+//   }
+// }
+
+//---------PROPERTY TRANSFORM----------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Transform")),
+//           body: Container(
+//             decoration: BoxDecoration(
+//               image: const DecorationImage(
+//                 image: NetworkImage(
+//                     'https://pixnio.com/free-images/2017/03/07/2017-03-07-10-59-39-900x600.jpg'),
+//                 fit: BoxFit.fitWidth,
+//               ),
+//               border: Border.all(
+//                 color: Colors.black,
+//                 width: 8,
+//               ),
+//             ),
+//             height: 200,
+//             width: 300,
+//             margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 30),
+//             transform: Matrix4.rotationZ(-0.1),
+//           )),
+//     );
+//   }
+// }
+
+//---------PROPERTY DECORATION----------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(title: const Text("Contoh Configuration")),
+//           body: Container(
+//               decoration: BoxDecoration(
+//                 color: const Color(0xff7c94b6),
+//                 image: const DecorationImage(
+//                   image: NetworkImage(
+//                       'https://pixnio.com/free-images/2018/12/02/2018-12-02-19-17-12.jpg'),
+//                   fit: BoxFit.fitWidth,
+//                 ),
+//                 border: Border.all(
+//                   color: Colors.black,
+//                   width: 8,
+//                 ),
+//                 borderRadius: BorderRadius.circular(12),
+//               ),
+//               height: 200,
+//               width: 300,
+//               margin: const EdgeInsets.all(20))),
+//     );
+//   }
+// }
+
+// ROW DAN COLUMN
+
+//------COLUMN WIDGET-------
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(title: const Text("Contoh Column Widget")),
+//         body: Column(
+//           children: [
+//             Container(
+//               color: Colors.purpleAccent,
+//               child: const FlutterLogo(
+//                 size: 90.0,
+//               ),
+//             ),
+//             Container(
+//               color: Colors.greenAccent,
+//               child: const FlutterLogo(
+//                 size: 90.0,
+//               ),
+//             ),
+//             Container(
+//               color: Colors.orangeAccent,
+//               child: const FlutterLogo(
+//                 size: 90.0,
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//--------ROW WIDGET----------
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Contoh Button")),
-        body: Container(
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: Colors.red[900]),
-            onPressed: () {}, 
-            //color: Colors.red[900],
-            child: Text(
-              "Button",
-              style: TextStyle(fontSize: 20),
+        appBar: AppBar(title: const Text("Contoh Row Widget")),
+        body: Row(
+          children: [
+            Container(
+              color: Colors.purpleAccent,
+              child: const FlutterLogo(
+                size: 90.0,
+              ),
             ),
-          )
+            Container(
+              color: Colors.greenAccent,
+              child: const FlutterLogo(
+                size: 90.0,
+              ),
+            ),
+            Container(
+              color: Colors.orangeAccent,
+              child: const FlutterLogo(
+                size: 90.0,
+              ),
+            ),
+          ],
         ),
       ),
     );
