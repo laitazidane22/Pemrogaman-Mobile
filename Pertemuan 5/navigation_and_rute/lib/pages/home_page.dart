@@ -6,8 +6,8 @@ class HomePage extends StatelessWidget {
 
   @override
   final List<Item> items = [
-    Item(name: 'Sugar', price: 5000),
-    Item(name: 'Salt', price: 2000)
+    Item(name: 'Sugar', price: 5000, image: 'assets/sugar.png'),
+    Item(name: 'Salt', price: 2000, image: 'assets/salt.png')
   ];
 
   @override
@@ -27,13 +27,26 @@ class HomePage extends StatelessWidget {
               return InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, '/item', arguments: item);
-                  
                 },
                 child: Card(
                   child: Container(
                     margin: EdgeInsets.all(8),
                     child: Row(
-                      children: [
+                      children: <Widget> [
+                        Expanded(child: Image.asset(
+                          item.image,
+                          height: 50,
+                          width: 50,
+                        )),
+
+                        Expanded(
+                          // child: TextButton.icon(icon: const Icon(Icons.add), label: Text(item.name), onPressed: () { Navigator.pushNamed(context, '/item', arguments: item); },),
+                          child: Text(
+                            item.name,
+                            textAlign: TextAlign.start,
+                          ),
+                          
+                        ),
                         Expanded(
                           child: Text(
                             item.price.toString(),
