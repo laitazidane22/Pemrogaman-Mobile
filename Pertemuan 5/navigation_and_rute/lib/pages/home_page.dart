@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:navigation_and_rute/models/item.dart';
 
+import 'item_page.dart';
+
 class HomePage extends StatelessWidget {
 
   @override
@@ -25,8 +27,9 @@ class HomePage extends StatelessWidget {
             itemBuilder: ((context, index) {
               final item = items[index];
               return InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, '/item', arguments: item);
+                onTap: () { 
+                  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ItemPage(item: item)));
                 },
                 child: Card(
                   child: Container(
@@ -37,7 +40,8 @@ class HomePage extends StatelessWidget {
                           item.image,
                           height: 50,
                           width: 50,
-                        )),
+                        )
+                        ),
 
                         Expanded(
                           // child: TextButton.icon(icon: const Icon(Icons.add), label: Text(item.name), onPressed: () { Navigator.pushNamed(context, '/item', arguments: item); },),
