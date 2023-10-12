@@ -63,7 +63,7 @@ class DbHelper {
   Future<List<Item>> getItemList() async {
     var itemMapList = await select();
     int count = itemMapList.length;
-    List<Item> itemList = List<Item>();
+    List<Item> itemList = [];
     for (int i = 0; i < count; i++) {
       itemList.add(Item.fromMap(itemMapList[i]));
     }
